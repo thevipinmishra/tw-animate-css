@@ -1,3 +1,13 @@
+/**
+ * TailwindCSS v4.0 compatible replacement for `tailwindcss-animate`.
+ *
+ * WARNING: The asterisks are not supported by some formatters and linters. You
+ * might want to exclude this file from formatters and linters for now.
+ *
+ * @author Luca Bosin <https://github.com/Wombosvideo>
+ * @license MIT
+ */
+
 @theme inline {
   --animation-delay-0: 0s;
   --animation-delay-75: 75ms;
