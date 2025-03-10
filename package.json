@@ -1,14 +1,14 @@
 {
-  "name": "tailwind-animate-css",
+  "name": "tailwindcss-animate-css",
   "version": "1.2.0",
   "description": "TailwindCSS v4.0 compatible replacement for `tailwindcss-animate`.",
   "scripts": {
-    "build": "mkdirp dist && cp src/tailwind-animate.css dist/",
+    "build": "mkdirp dist && cp src/tailwindcss-animate.css dist/",
     "format": "prettier --write ."
   },
-  "main": "dist/tailwind-animate.css",
+  "main": "dist/tailwindcss-animate.css",
   "exports": {
-    ".": "./dist/tailwind-animate.css"
+    ".": "./dist/tailwindcss-animate.css"
   },
   "keywords": [
     "tailwindcss-animate",
@@ -20,13 +20,13 @@
     "url": "https://github.com/Wombosvideo"
   },
   "license": "MIT",
-  "homepage": "https://github.com/Wombosvideo/tailwind-animate-css",
+  "homepage": "https://github.com/Wombosvideo/tailwindcss-animate-css",
   "bugs": {
-    "url": "https://github.com/Wombosvideo/tailwind-animate-css/issues"
+    "url": "https://github.com/Wombosvideo/tailwindcss-animate-css/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wombosvideo/tailwind-animate-css.git"
+    "url": "https://github.com/Wombosvideo/tailwindcss-animate-css.git"
   },
   "packageManager": "pnpm@10.5.0",
   "devDependencies": {
