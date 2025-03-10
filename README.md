@@ -23,12 +23,12 @@ CSS file defining custom utilities based on the new
    @import "tw-animate-css";
    ```
 
-   > [!NOTE]
-   > This works with esbuild, Vite and probably other bundlers too. If you are
-   > using a different bundler, the syntax may differ.
-   > [Let me know][Create_Issue] how it works and I'll update the documentation.
-
 3. Start using the animations!
+
+> [!NOTE]
+> This code works with esbuild, Vite and probably other bundlers too. If you are
+> using a different bundler, the syntax may differ.
+> [Let me know][Create_Issue] how it works and I'll update the documentation.
 
 ### Manual download
 
