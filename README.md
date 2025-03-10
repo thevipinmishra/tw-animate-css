@@ -1,11 +1,11 @@
-# tailwindcss-animate-css
+# tw-animate-css
 
 TailwindCSS v4.0 compatible replacement for `tailwindcss-animate`
 ([GitHub][Original_Plugin_GitHub], [npm][Original_Plugin_NPM]).
 
 Instead of being an old-fashioned JavaScript plugin, this package provides a
 CSS file defining custom utilities based on the new
-[CSS-first architecture][TailwindCSS_Custom_Utilities], hence the suffix.
+[CSS-first architecture][TailwindCSS_Custom_Utilities].
 
 ## Installation
 
@@ -14,13 +14,13 @@ CSS file defining custom utilities based on the new
 1. Install the package with `npm`:
 
    ```bash
-   npm install tailwindcss-animate-css
+   npm install tw-animate-css
    ```
 
 2. Add the following line to your `app.css` or `globals.css` file:
 
    ```css
-   @import "tailwindcss-animate-css";
+   @import "tw-animate-css";
    ```
 
    > [!NOTE]
@@ -32,12 +32,12 @@ CSS file defining custom utilities based on the new
 
 ### Manual download
 
-1. Download the [`tailwindcss-animate.css`][CSS_File]
+1. Download the [`tw-animate.css`][CSS_File]
    file from GitHub and place it next to your `app.css`.
 2. Add the following line to your `app.css` or `globals.css` file:
 
    ```css
-   @import "./tailwindcss-animate.css";
+   @import "./tw-animate.css";
    ```
 
 3. Start using the animations!
@@ -57,5 +57,5 @@ Refer to the [original documentation][Original_Plugin_Docs] for more information
 [Original_Plugin_NPM]: https://www.npmjs.com/package/tailwindcss-animate
 [Original_Plugin_Docs]: https://github.com/jamiebuilds/tailwindcss-animate/blob/main/README.md
 [TailwindCSS_Custom_Utilities]: https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
-[Create_Issue]: https://github.com/Wombosvideo/tailwindcss-animate-css/issues/new
-[CSS_File]: https://raw.githubusercontent.com/Wombosvideo/tailwindcss-animate-css/refs/heads/main/src/tailwindcss-animate.css
+[Create_Issue]: https://github.com/Wombosvideo/tw-animate-css/issues/new
+[CSS_File]: https://raw.githubusercontent.com/Wombosvideo/tw-animate-css/refs/heads/main/src/tw-animate.css
