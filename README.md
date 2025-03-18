@@ -1,7 +1,6 @@
 # tw-animate-css
 
-TailwindCSS v4.0 compatible replacement for `tailwindcss-animate`
-([GitHub][Original_Plugin_GitHub], [npm][Original_Plugin_NPM]).
+TailwindCSS v4.0 compatible replacement for [`tailwindcss-animate`][Original_Plugin_GitHub].
 
 Instead of being an old-fashioned JavaScript plugin, this package provides a
 CSS file defining custom utilities based on the new
@@ -14,7 +13,7 @@ CSS file defining custom utilities based on the new
 1. Install the package with `npm`:
 
    ```bash
-   npm install tw-animate-css
+   npm install -D tw-animate-css
    ```
 
 2. Add the following line to your `app.css` or `globals.css` file:
@@ -33,7 +32,7 @@ CSS file defining custom utilities based on the new
 ### Manual download
 
 1. Download the [`tw-animate.css`][CSS_File]
-   file from GitHub and place it next to your `app.css`.
+   file from GitHub and place it next to your `app.css` or `globals.css` file.
 2. Add the following line to your `app.css` or `globals.css` file:
 
    ```css
@@ -44,7 +43,10 @@ CSS file defining custom utilities based on the new
 
 ## Usage
 
-Refer to the [original documentation][Original_Plugin_Docs] for more information.
+> [!NOTE]
+> The documentation is currently under construction. Please refer to the [original documentation][Original_Plugin_Docs] for now.
+
+---
 
 > [!NOTE]
 > I use very litte of the original library, so it might not be a 100% compatible
@@ -54,7 +56,6 @@ Refer to the [original documentation][Original_Plugin_Docs] for more information
 <!-- Links -->
 
 [Original_Plugin_GitHub]: https://github.com/jamiebuilds/tailwindcss-animate
-[Original_Plugin_NPM]: https://www.npmjs.com/package/tailwindcss-animate
 [Original_Plugin_Docs]: https://github.com/jamiebuilds/tailwindcss-animate/blob/main/README.md
 [TailwindCSS_Custom_Utilities]: https://tailwindcss.com/docs/adding-custom-styles#adding-custom-utilities
 [Create_Issue]: https://github.com/Wombosvideo/tw-animate-css/issues/new
