@@ -7,22 +7,11 @@ settings:
 importers:
   .:
     devDependencies:
-      mkdirp:
-        specifier: ^3.0.1
-        version: 3.0.1
       prettier:
         specifier: ^3.5.3
         version: 3.5.3
 
 packages:
-  mkdirp@3.0.1:
-    resolution:
-      {
-        integrity: sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==,
-      }
-    engines: { node: ">=10" }
-    hasBin: true
-
   prettier@3.5.3:
     resolution:
       {
@@ -32,6 +21,4 @@ packages:
     hasBin: true
 
 snapshots:
-  mkdirp@3.0.1: {}
-
   prettier@3.5.3: {}

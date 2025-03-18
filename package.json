@@ -10,6 +10,9 @@
   "exports": {
     ".": "./dist/tw-animate.css"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "tailwindcss-animate",
     "tailwindcss",
