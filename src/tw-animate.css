@@ -1,14 +1,13 @@
 /**
  * TailwindCSS v4.0 compatible replacement for `tailwindcss-animate`.
  *
- * WARNING: The asterisks are not supported by some formatters and linters. You
- * might want to exclude this file from formatters and linters for now.
- *
  * @author Luca Bosin <https://github.com/Wombosvideo>
  * @license MIT
  */
 
 @theme inline {
+  /* Predefined values */
+
   --animation-delay-0: 0s;
   --animation-delay-75: 75ms;
   --animation-delay-100: 0.1s;
@@ -33,9 +32,6 @@
   --animation-fill-mode-backwards: backwards;
   --animation-fill-mode-both: both;
 
-  --animate-in: var(--tw-duration, 150ms) var(--tw-ease, ease) enter;
-  --animate-out: var(--tw-duration, 150ms) var(--tw-ease, ease) exit;
-
   --percentage-0: 0;
   --percentage-5: 0.05;
   --percentage-10: 0.1;
@@ -58,6 +54,13 @@
   --percentage-95: 0.95;
   --percentage-100: 1;
 
+  /* Animations and keyframes */
+
+  --animate-in: var(--tw-duration, 150ms) var(--tw-ease, ease) enter;
+  --animate-out: var(--tw-duration, 150ms) var(--tw-ease, ease) exit;
+  --animate-accordion-down: accordion-down var(--tw-duration, 200ms) ease-out;
+  --animate-accordion-up: accordion-up var(--tw-duration, 200ms) ease-out;
+
   @keyframes enter {
     from {
       opacity: var(--tw-enter-opacity, 1);
@@ -75,9 +78,6 @@
         rotate(var(--tw-exit-rotate, 0));
     }
   }
-
-  --animate-accordion-down: accordion-down var(--tw-duration, 200ms) ease-out;
-  --animate-accordion-up: accordion-up var(--tw-duration, 200ms) ease-out;
 
   @keyframes accordion-down {
     from {
@@ -97,6 +97,8 @@
     }
   }
 }
+
+/* Utility classes */
 
 /*
  * Tailwind's default `duration` utility sets the `--tw-duration` variable, so
