@@ -91,6 +91,27 @@
         rotate(var(--tw-exit-rotate, 0));
     }
   }
+
+  --animate-accordion-down: accordion-down var(--tw-duration, 200ms) ease-out;
+  --animate-accordion-up: accordion-up var(--tw-duration, 200ms) ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height, var(--bits-accordion-content-height));
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height, var(--bits-accordion-content-height));
+    }
+    to {
+      height: 0;
+    }
+  }
 }
 
 /*
@@ -179,7 +200,6 @@
   --tw-enter-translate-y: calc(--value(integer) * var(--spacing) * -1);
   --tw-enter-translate-y: calc(--value(--translate-*, [percentage], ratio, [length]) * -1);
 }
-
 @utility slide-in-from-bottom {
   --tw-enter-translate-y: 100%;
 }
