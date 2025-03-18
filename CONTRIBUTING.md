@@ -51,7 +51,7 @@ In general:
 - Use appropriate whitespace for readability
 
 > [!TIP]
-> You can run `pnpm format` to automatically format your code.
+> You can run `pnpm format` to format your code during development. The code will also be formatted before committing.
 
 ## Commit Guidelines
 
