@@ -39,11 +39,11 @@
   "scripts": {
     "build": "pnpx @tailwindcss/cli -i ./src/tw-animate.css -o ./dist/tw-animate.css -m",
     "format": "prettier --write --ignore-unknown .",
-    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then npx simple-git-hooks; fi"
+    "prepare": "if [ \"$NODE_ENV\" != \"production\" ]; then pnpx simple-git-hooks; fi"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
-    "commit-msg": "npx commitlint --edit $1"
+    "pre-commit": "pnpx lint-staged",
+    "commit-msg": "pnpx commitlint --edit $1"
   },
   "commitlint": {
     "extends": [
@@ -65,5 +65,10 @@
     "simple-git-hooks": "^2.11.1",
     "sort-package-json": "^3.0.0"
   },
-  "packageManager": "pnpm@10.6.3"
+  "packageManager": "pnpm@10.6.3",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "simple-git-hooks"
+    ]
+  }
 }
