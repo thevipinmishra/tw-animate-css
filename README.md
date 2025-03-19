@@ -45,6 +45,9 @@ CSS file defining custom utilities based on the new
 
 > [!NOTE]
 > The documentation is currently under construction. Please refer to the [original documentation][Original_Plugin_Docs] for now.
+>
+> I added the `accordion-down`, `accordion-up` and `caret-blink` animations to the package. They still need their final touches,
+> but I thought I let you know. And you can already use them with the default values.
 
 ---
 
