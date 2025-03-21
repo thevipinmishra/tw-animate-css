@@ -13,7 +13,7 @@ permissions:
 jobs:
   release:
     name: Release Canary
-    runs-on: upnpmtu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repo
