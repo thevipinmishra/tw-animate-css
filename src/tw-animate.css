@@ -128,7 +128,7 @@
 }
 
 @utility repeat-* {
-  animation-iteration-count: --value(--animation-repeat- *, integer);
+  animation-iteration-count: --value(--animation-repeat- *, number);
 }
 
 @utility direction-* {
