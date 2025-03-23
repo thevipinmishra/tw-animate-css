@@ -199,17 +199,16 @@
 }
 @utility slide-in-from-top-* {
   --tw-enter-translate-y: calc(--value(integer) * var(--spacing) * -1);
-  --tw-exit-translate-y: calc(--value(--percentage- *) * -100%);
+  --tw-enter-translate-y: calc(--value(--percentage- *) * -100%);
   --tw-enter-translate-y: calc(--value(ratio) * 100%);
   --tw-enter-translate-y: calc(--value(--translate- *, [percentage], [length]) * -1);
 }
-
 @utility slide-in-from-bottom {
   --tw-enter-translate-y: 100%;
 }
 @utility slide-in-from-bottom-* {
   --tw-enter-translate-y: calc(--value(integer) * var(--spacing));
-  --tw-exit-translate-y: calc(--value(--percentage- *) * 100%);
+  --tw-enter-translate-y: calc(--value(--percentage- *) * 100%);
   --tw-enter-translate-y: calc(--value(ratio) * 100%);
   --tw-enter-translate-y: --value(--translate- *, [percentage], [length]);
 }
@@ -231,7 +230,6 @@
   --tw-enter-translate-x: calc(--value(ratio) * 100%);
   --tw-enter-translate-x: --value(--translate- *, [percentage], [length]);
 }
-
 @utility slide-out-to-top {
   --tw-exit-translate-y: -100%;
 }
