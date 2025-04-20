@@ -40,7 +40,15 @@ jobs:
       - name: Build package
         run: pnpm build
 
-      - name: Publish to npm
+      - name: Prepare main package README
+        run: |
+          cp README.md README.md.original
+          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**/g' README.md
+
+      - name: Publish main package to npm
         run: pnpm publish --provenance --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Restore original README
+        run: mv README.md.original README.md
