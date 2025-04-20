@@ -202,10 +202,10 @@ To customize the animation parameters, use the following classes:
 [Docs_Running]: ./docs/parameters/animation-play-state.md#running
 [Docs_Paused]: ./docs/parameters/animation-play-state.md#paused
 [Docs_Play_State]: ./docs/parameters/animation-play-state.md#play-state-
-[Docs_Fade]: ./docs/transforms/fade.md
-[Docs_Zoom]: ./docs/transforms/zoom.md
-[Docs_Spin]: ./docs/transforms/spin.md
-[Docs_Slide]: ./docs/transforms/slide.md
+[Docs_Fade]: ./docs/transforms/opacity.md
+[Docs_Zoom]: ./docs/transforms/scale.md
+[Docs_Spin]: ./docs/transforms/rotate.md
+[Docs_Slide]: ./docs/transforms/translate.md
 [Docs_Accordion]: ./docs/animations/accordion.md
 [Docs_Collapsible]: ./docs/animations/collapsible.md
 [Docs_Caret]: ./docs/animations/caret-blink.md
