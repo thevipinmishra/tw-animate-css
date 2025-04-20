@@ -43,6 +43,8 @@ In the context of animations, transforms define the starting and ending styles o
 [Docs_Zoom_Out]: ./scale.md#zoom-out-
 [Docs_Spin_In]: ./rotate.md#spin-in-
 [Docs_Spin_Out]: ./rotate.md#spin-out-
+[Docs_Slide_In_From_Top]: ./translate.md#slide-in-from-top-
+[Docs_Slide_In_From_Bottom]: ./translate.md#slide-in-from-bottom-
 [Docs_Slide_In_From_Left]: ./translate.md#slide-in-from-left-
 [Docs_Slide_In_From_Right]: ./translate.md#slide-in-from-right-
 [Docs_Slide_Out_To_Top]: ./translate.md#slide-out-to-top-
