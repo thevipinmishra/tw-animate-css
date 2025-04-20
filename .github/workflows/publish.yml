@@ -43,7 +43,7 @@ jobs:
       - name: Prepare main package README
         run: |
           cp README.md README.md.original
-          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**/g' README.md
+          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**  /g' README.md
 
       - name: Publish main package to npm
         run: pnpm publish --provenance --access public --no-git-checks
@@ -61,7 +61,7 @@ jobs:
 
           # Create modified README for the alias package
           perl -i -pe 's/(?<!\/)tw-animate-css/tailwindcss-animate-x/g' README.md
-          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**/g' README.md
+          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**  /g' README.md
 
           # Add alias note after the first --- line
           awk '
@@ -69,7 +69,7 @@ jobs:
           /^---$/ {
             if(p) {
               print $0
-              print "\n> ℹ️ **NOTE**\n> This package is an alias of [tw-animate-css](https://www.npmjs.com/package/tw-animate-css). Both packages provide identical functionality, so you can use whichever name you prefer.\n"
+              print "\n> ℹ️ **NOTE**  \n> This package is an alias of [tw-animate-css](https://www.npmjs.com/package/tw-animate-css). Both packages provide identical functionality, so you can use whichever name you prefer.\n"
               p=0
             } else {
               print $0
