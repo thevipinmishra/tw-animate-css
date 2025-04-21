@@ -60,12 +60,6 @@
   --animate-in: enter var(--tw-duration, 150ms) var(--tw-ease, ease);
   --animate-out: exit var(--tw-duration, 150ms) var(--tw-ease, ease);
 
-  --animate-accordion-down: content-down var(--tw-duration, 200ms) ease-out;
-  --animate-accordion-up: content-up var(--tw-duration, 200ms) ease-out;
-  --animate-collapsible-down: content-down var(--tw-duration, 200ms) ease-out;
-  --animate-collapsible-up: content-up var(--tw-duration, 200ms) ease-out;
-  --animate-caret-blink: caret-blink 1.25s ease-out infinite;
-
   @keyframes enter {
     from {
       opacity: var(--tw-enter-opacity, 1);
@@ -85,48 +79,57 @@
   }
 
   /*
-   * The `--radix-accordion-content-height` variable is set by Radix UI's
-   * Accordion component. The `--bits-accordion-content-height` variable is set
-   * by Bits' Accordion component. The `--radix-collapsible-content-height`
-   * variable is set by Radix UI's Collapsible component. The
-   * `--bits-collapsible-content-height` variable is set by Bits' Collapsible
-   * component.
-   *
-   * These variables are used to animate the height of the content when it is
-   * expanded or collapsed. `auto` is used as a fallback value but it requires
-   * `interpolate-size: allow-keywords` to be set and is currently not widely
-   * supported. See <https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size>
-   */
+  * Radix and Bits UI utilize CSS variables to define the height of Accordion and Collapsible
+  * content during open/close animations. The `--radix/bits-accordion-content-height` variables
+  * control the height of Accordion content, while collapsible variables are used for Collapsibles.
+  *
+  * The fallback value `auto` is used here, but it depends on the `interpolate-size: allow-keywords`
+  * property, which currently has limited browser support. For more details, see: 
+  * <https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size>
+  */
 
-  @keyframes content-down {
+  --animate-accordion-down: accordion-down var(--tw-duration, 200ms) ease-out;
+  --animate-accordion-up: accordion-up var(--tw-duration, 200ms) ease-out;
+  --animate-collapsible-down: collapsible-down var(--tw-duration, 200ms) ease-out;
+  --animate-collapsible-up: collapsible-up var(--tw-duration, 200ms) ease-out;
+
+  @keyframes accordion-down {
     from {
       height: 0;
     }
     to {
-      height: var(
-        --radix-accordion-content-height,
-        var(
-          --bits-accordion-content-height,
-          var(--radix-collapsible-content-height, var(--bits-collapsible-content-height, auto))
-        )
-      );
+      height: var(--radix-accordion-content-height, var(--bits-accordion-content-height, auto));
     }
   }
 
-  @keyframes content-up {
+  @keyframes accordion-up {
     from {
-      height: var(
-        --radix-accordion-content-height,
-        var(
-          --bits-accordion-content-height,
-          var(--radix-collapsible-content-height, var(--bits-collapsible-content-height, auto))
-        )
-      );
+      height: var(--radix-accordion-content-height, var(--bits-accordion-content-height, auto));
     }
     to {
       height: 0;
     }
   }
+
+  @keyframes collapsible-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-collapsible-content-height, var(--bits-collapsible-content-height, auto));
+    }
+  }
+
+  @keyframes collapsible-up {
+    from {
+      height: var(--radix-collapsible-content-height, var(--bits-collapsible-content-height, auto));
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  --animate-caret-blink: caret-blink 1.25s ease-out infinite;
 
   @keyframes caret-blink {
     0%,
