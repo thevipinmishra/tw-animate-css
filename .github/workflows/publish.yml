@@ -41,27 +41,17 @@ jobs:
         run: pnpm build
 
       - name: Prepare main package README
-        run: |
-          cp README.md README.md.original
-          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**  /g' README.md
+        run: sed -i 's/\[!NOTE\]/ℹ️ **NOTE**  /g' README.md
 
       - name: Publish main package to npm
         run: pnpm publish --provenance --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Restore original README
-        run: mv README.md.original README.md
-
       - name: Create and publish alias package
         run: |
-          # Store original package.json and README.md content
-          cp package.json package.json.original
-          cp README.md README.md.original
-
-          # Create modified README for the alias package
+          # Modify README for the alias package
           perl -i -pe 's/(?<!\/)tw-animate-css/tailwindcss-animate-x/g' README.md
-          sed -i 's/\[!NOTE\]/ℹ️ **NOTE**  /g' README.md
 
           # Add alias note after the first --- line
           awk '
@@ -83,9 +73,5 @@ jobs:
 
           # Publish alias package
           pnpm publish --provenance --access public --no-git-checks
-
-          # Restore original files
-          mv package.json.original package.json
-          mv README.md.original README.md
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
