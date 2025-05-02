@@ -31,7 +31,10 @@ animation: accordion-down var(--tw-duration, 200ms) ease-out;
     height: 0;
   }
   to {
-    height: var(--radix-accordion-content-height, var(--bits-accordion-content-height, auto));
+    height: var(
+      --radix-accordion-content-height,
+      var(--bits-accordion-content-height, var(--reka-accordion-content-height, auto))
+    );
   }
 }
 ```
@@ -69,7 +72,10 @@ animation: accordion-up var(--tw-duration, 200ms) ease-out;
 
 @keyframes accordion-up {
   from {
-    height: var(--radix-accordion-content-height, var(--bits-accordion-content-height, auto));
+    height: var(
+      --radix-accordion-content-height,
+      var(--bits-accordion-content-height, var(--reka-accordion-content-height, auto))
+    );
   }
   to {
     height: 0;
@@ -88,6 +94,7 @@ Until browser support for [`interpolate-size: allow-keywords`][MDN_Interpolate_S
 
 - `--radix-accordion-content-height` as in the [Radix documentation][Radix_Docs]
 - `--bits-accordion-content-height` as in the [BitsUI documentation][Bits_Docs]
+- `--reka-accordion-content-height` as in the [Reka documentation][Reka_Docs]
 
 Check out the [setting content height](#setting-content-height) section for more information.
 
@@ -147,8 +154,38 @@ BitsUI automatically sets the `--bits-accordion-content-height` variable. Just u
 
 Learn more about BitsUI's accordion primitive in the [BitsUI documentation][Bits_Docs].
 
+### Using Reka (Vue)
+
+Reka automatically sets the `--reka-accordion-content-height` variable. Just use the headless accordion component primitive!
+
+```vue
+<script setup>
+import {
+  AccordionContent,
+  AccordionHeader,
+  AccordionItem,
+  AccordionRoot,
+  AccordionTrigger,
+} from "reka-ui";
+</script>
+
+<template>
+  <AccordionRoot>
+    <AccordionItem>
+      <AccordionHeader>
+        <AccordionTrigger />
+      </AccordionHeader>
+      <AccordionContent />
+    </AccordionItem>
+  </AccordionRoot>
+</template>
+```
+
+Learn more about Reka's accordion primitive in the [Reka documentation][Reka_Docs].
+
 <!-- Links -->
 
 [MDN_Interpolate_Size]: https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size
 [Radix_Docs]: https://radix-ui.com/docs/primitives/components/accordion#content
 [Bits_Docs]: https://bits-ui.com/docs/components/accordion#content
+[Reka_Docs]: https://reka-ui.com/docs/components/accordion#content

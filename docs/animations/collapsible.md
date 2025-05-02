@@ -31,7 +31,10 @@ animation: collapsible-down var(--tw-duration, 200ms) ease-out;
     height: 0;
   }
   to {
-    height: var(--radix-collapsible-content-height, var(--bits-collapsible-content-height, auto));
+    height: var(
+      --radix-collapsible-content-height,
+      var(--bits-collapsible-content-height, var(--reka-collapsible-content-height, auto))
+    );
   }
 }
 ```
@@ -69,7 +72,10 @@ animation: collapsible-up var(--tw-duration, 200ms) ease-out;
 
 @keyframes collapsible-up {
   from {
-    height: var(--radix-collapsible-content-height, var(--bits-collapsible-content-height, auto));
+    height: var(
+      --radix-collapsible-content-height,
+      var(--bits-collapsible-content-height, var(--reka-collapsible-content-height, auto))
+    );
   }
   to {
     height: 0;
@@ -88,6 +94,7 @@ Until browser support for [`interpolate-size: allow-keywords`][MDN_Interpolate_S
 
 - `--radix-collapsible-content-height` as in the [Radix documentation][Radix_Docs]
 - `--bits-collapsible-content-height` as in the [BitsUI documentation][Bits_Docs]
+- `--reka-collapsible-content-height` as in the [Reka documentation][Reka_Docs]
 
 Check out the [setting content height](#setting-content-height) section for more information.
 
@@ -139,8 +146,28 @@ BitsUI automatically sets the `--bits-collapsible-content-height` variable. Just
 
 Learn more about BitsUI's collapsible primitive in the [BitsUI documentation][Bits_Docs].
 
+### Using Reka (Vue)
+
+Reka automatically sets the `--reka-collapsible-content-height` variable. Just use the headless collapsible component primitive!
+
+```vue
+<script setup>
+import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from "reka-ui";
+</script>
+
+<template>
+  <CollapsibleRoot>
+    <CollapsibleTrigger />
+    <CollapsibleContent />
+  </CollapsibleRoot>
+</template>
+```
+
+Learn more about Reka's collapsible primitive in the [Reka documentation][Reka_Docs].
+
 <!-- Links -->
 
 [MDN_Interpolate_Size]: https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size
 [Radix_Docs]: https://www.radix-ui.com/primitives/docs/components/collapsible#content
 [Bits_Docs]: https://bits-ui.com/docs/components/collapsible#content
+[Reka_Docs]: https://reka-ui.com/docs/components/collapsible#content
