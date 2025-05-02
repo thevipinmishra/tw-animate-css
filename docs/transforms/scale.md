@@ -2,6 +2,9 @@
 
 Scale transforms can be used to zoom elements in and out.
 
+> [!NOTE]
+> You also need to apply [`animate-in`][Animate_in] or [`animate-out`][Animate_out] classes respectively.
+
 ## `zoom-in-*`
 
 <table>
@@ -139,3 +142,8 @@ Scale transforms can be used to zoom elements in and out.
 </tr>
 </tbody>
 </table>
+
+<!-- Links -->
+
+[Animate_in]: ../animations/in-out.md#animate-in
+[Animate_out]: ../animations/in-out.md#animate-out

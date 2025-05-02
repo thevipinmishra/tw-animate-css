@@ -2,6 +2,9 @@
 
 While technically not a transform, opacity can be used to fade elements in and out.
 
+> [!NOTE]
+> You also need to apply [`animate-in`][Animate_in] or [`animate-out`][Animate_out] classes respectively.
+
 ## `fade-in-*`
 
 <table>
@@ -141,3 +144,8 @@ While technically not a transform, opacity can be used to fade elements in and o
 </tr>
 </tbody>
 </table>
+
+<!-- Links -->
+
+[Animate_in]: ../animations/in-out.md#animate-in
+[Animate_out]: ../animations/in-out.md#animate-out

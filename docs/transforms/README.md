@@ -4,6 +4,9 @@ Transforms are used to modify how an element is rendered on the screen. They are
 
 In the context of animations, transforms define the starting and ending styles of the animated element.
 
+> [!NOTE]
+> You also need to apply [`animate-in`][Animate_in] or [`animate-out`][Animate_out] classes respectively.
+
 | Class                                                 | Description                                                                                                                          |
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | [`fade-in`][Docs_Fade_In]                             | Fades the element in from `opacity: 0`.                                                                                              |
@@ -37,6 +40,8 @@ In the context of animations, transforms define the starting and ending styles o
 
 <!-- Links -->
 
+[Animate_in]: ../animations/in-out.md#animate-in
+[Animate_out]: ../animations/in-out.md#animate-out
 [Docs_Fade_In]: ./opacity.md#fade-in-
 [Docs_Fade_Out]: ./opacity.md#fade-out-
 [Docs_Zoom_In]: ./scale.md#zoom-in-

@@ -2,6 +2,9 @@
 
 Translate transforms can be used to slide elements in and out from different directions.
 
+> [!NOTE]
+> You also need to apply [`animate-in`][Animate_in] or [`animate-out`][Animate_out] classes respectively.
+
 ## `slide-in-from-top-*`
 
 <table>
@@ -553,3 +556,8 @@ Translate transforms can be used to slide elements in and out from different dir
 </tr>
 </tbody>
 </table>
+
+<!-- Links -->
+
+[Animate_in]: ../animations/in-out.md#animate-in
+[Animate_out]: ../animations/in-out.md#animate-out

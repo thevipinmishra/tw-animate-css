@@ -2,6 +2,9 @@
 
 Rotate transforms can be used to spin elements in and out with a rotation animation.
 
+> [!NOTE]
+> You also need to apply [`animate-in`][Animate_in] or [`animate-out`][Animate_out] classes respectively.
+
 ## `spin-in-*`
 
 <table>
@@ -139,3 +142,8 @@ Rotate transforms can be used to spin elements in and out with a rotation animat
 </tr>
 </tbody>
 </table>
+
+<!-- Links -->
+
+[Animate_in]: ../animations/in-out.md#animate-in
+[Animate_out]: ../animations/in-out.md#animate-out
