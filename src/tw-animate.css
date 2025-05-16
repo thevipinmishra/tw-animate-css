@@ -212,18 +212,28 @@
   --tw-enter-scale: 0;
 }
 @utility zoom-in-* {
-  --tw-enter-scale: calc(--value([percentage]) / 100%);
-  --tw-enter-scale: calc(--value([ratio], [number]));
-  --tw-enter-scale: --value(--percentage- *);
+  --tw-enter-scale: calc(--value(number) * 1%);
+  --tw-enter-scale: calc(--value(ratio));
+  --tw-enter-scale: --value(--percentage- *, [ *]);
+}
+@utility -zoom-in-* {
+  --tw-enter-scale: calc(--value(number) * -1%);
+  --tw-enter-scale: calc(--value(ratio) * -1);
+  --tw-enter-scale: --value(--percentage- *, [ *]);
 }
 
 @utility zoom-out {
   --tw-exit-scale: 0;
 }
 @utility zoom-out-* {
-  --tw-exit-scale: calc(--value([percentage]) / 100%);
-  --tw-exit-scale: calc(--value([ratio], [number]));
-  --tw-exit-scale: --value(--percentage- *);
+  --tw-exit-scale: calc(--value(number) * 1%);
+  --tw-exit-scale: calc(--value(ratio));
+  --tw-exit-scale: --value(--percentage- *, [ *]);
+}
+@utility -zoom-out-* {
+  --tw-exit-scale: calc(--value(number) * -1%);
+  --tw-exit-scale: calc(--value(ratio) * -1);
+  --tw-exit-scale: --value(--percentage- *, [ *]);
 }
 
 @utility spin-in {
@@ -231,7 +241,16 @@
 }
 @utility spin-in-* {
   --tw-enter-rotate: calc(--value(number) * 1deg);
-  --tw-enter-rotate: --value(--rotate- *, [angle]);
+  --tw-enter-rotate: calc(--value(ratio) * 360deg);
+  --tw-enter-rotate: --value(--rotate- *, [ *]);
+}
+@utility -spin-in {
+  --tw-enter-rotate: -30deg;
+}
+@utility -spin-in-* {
+  --tw-enter-rotate: calc(--value(number) * -1deg);
+  --tw-enter-rotate: calc(--value(ratio) * -360deg);
+  --tw-enter-rotate: --value(--rotate- *, [ *]);
 }
 
 @utility spin-out {
@@ -239,7 +258,16 @@
 }
 @utility spin-out-* {
   --tw-exit-rotate: calc(--value(number) * 1deg);
-  --tw-exit-rotate: --value(--rotate- *, [angle]);
+  --tw-exit-rotate: calc(--value(ratio) * 360deg);
+  --tw-exit-rotate: --value(--rotate- *, [ *]);
+}
+@utility -spin-out {
+  --tw-exit-rotate: -30deg;
+}
+@utility -spin-out-* {
+  --tw-exit-rotate: calc(--value(number) * -1deg);
+  --tw-exit-rotate: calc(--value(ratio) * -360deg);
+  --tw-exit-rotate: --value(--rotate- *, [ *]);
 }
 
 @utility slide-in-from-top {
