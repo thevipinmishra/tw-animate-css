@@ -10,7 +10,6 @@
   @property --tw-animation-duration {
     syntax: "*";
     inherits: false;
-    initial-value: 150ms;
   }
 
   @property --tw-enter-opacity {
