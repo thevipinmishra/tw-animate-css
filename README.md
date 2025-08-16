@@ -11,6 +11,9 @@ A collection of Tailwind CSS v4.0 utilities for creating beautiful animations. I
 
 This package is a replacement for [`tailwindcss-animate`][Original_Plugin_GitHub]. It embraces the new [CSS-first architecture][TailwindCSS_Custom_Utilities], providing a pure CSS solution for adding animation capabilities to your Tailwind CSS project without relying on the legacy JavaScript plugin system or having to define all keywords from scratch.
 
+> [!WARNING]
+> The upcoming release v2.0.0 will include breaking changes. A migration script and a guide will be provided to help you transition smoothly.
+
 ## Table of Contents
 
 - [Getting Started](#getting-started)
