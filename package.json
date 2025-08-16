@@ -64,12 +64,12 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-    "lint-staged": "^16.1.2",
+    "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
-    "simple-git-hooks": "^2.13.0",
+    "simple-git-hooks": "^2.13.1",
     "sort-package-json": "^3.4.0"
   },
-  "packageManager": "pnpm@10.13.1",
+  "packageManager": "pnpm@10.14.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "simple-git-hooks"
