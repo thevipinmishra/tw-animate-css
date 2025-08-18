@@ -35,13 +35,14 @@
     "name": "Luca Bosin",
     "url": "https://github.com/Wombosvideo"
   },
+  "type": "module",
   "exports": "./dist/tw-animate.css",
   "main": "./dist/tw-animate.css",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "pnpx @tailwindcss/cli -i ./src/tw-animate.css -o ./dist/tw-animate.css -m",
+    "build": "pnpx @tailwindcss/cli -i ./src/tw-animate.css -o ./dist/tw-animate.css -m && node ./transform.ts ./dist/tw-animate.css",
     "format": "prettier --write --ignore-unknown .",
     "prepare": "simple-git-hooks"
   },
@@ -64,6 +65,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@types/node": "^24.3.0",
     "lint-staged": "^16.1.5",
     "prettier": "^3.6.2",
     "simple-git-hooks": "^2.13.1",
