@@ -33,7 +33,10 @@ animation: collapsible-down var(--tw-duration, 200ms) ease-out;
   to {
     height: var(
       --radix-collapsible-content-height,
-      var(--bits-collapsible-content-height, var(--reka-collapsible-content-height, auto))
+      var(
+        --bits-collapsible-content-height,
+        var(--reka-collapsible-content-height, var(--kb-collapsible-content-height, auto))
+      )
     );
   }
 }
@@ -74,7 +77,10 @@ animation: collapsible-up var(--tw-duration, 200ms) ease-out;
   from {
     height: var(
       --radix-collapsible-content-height,
-      var(--bits-collapsible-content-height, var(--reka-collapsible-content-height, auto))
+      var(
+        --bits-collapsible-content-height,
+        var(--reka-collapsible-content-height, var(--kb-collapsible-content-height, auto))
+      )
     );
   }
   to {
@@ -95,8 +101,7 @@ Until browser support for [`interpolate-size: allow-keywords`][MDN_Interpolate_S
 - `--radix-collapsible-content-height` as in the [Radix documentation][Radix_Docs]
 - `--bits-collapsible-content-height` as in the [BitsUI documentation][Bits_Docs]
 - `--reka-collapsible-content-height` as in the [Reka documentation][Reka_Docs]
-
-Check out the [setting content height](#setting-content-height) section for more information.
+- `--kb-collapsible-content-height` as in the [Kobalte documentation][Kobalte_Docs]
 
 ### HTML
 
@@ -165,7 +170,7 @@ import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from "reka-ui
 
 Learn more about Reka's collapsible primitive in the [Reka documentation][Reka_Docs].
 
-### Using Kobalte
+### Using Kobalte (SolidJS)
 
 Kobalte automatically sets the `--kb-collapsible-content-height` variable. Just use the headless collapsible component primitive!
 

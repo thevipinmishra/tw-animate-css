@@ -33,7 +33,13 @@ animation: accordion-down var(--tw-duration, 200ms) ease-out;
   to {
     height: var(
       --radix-accordion-content-height,
-      var(--bits-accordion-content-height, var(--reka-accordion-content-height, auto))
+      var(
+        --bits-accordion-content-height,
+        var(
+          --reka-accordion-content-height,
+          var(--kb-accordion-content-height, var(--ngp-accordion-content-height, auto))
+        )
+      )
     );
   }
 }
@@ -74,7 +80,13 @@ animation: accordion-up var(--tw-duration, 200ms) ease-out;
   from {
     height: var(
       --radix-accordion-content-height,
-      var(--bits-accordion-content-height, var(--reka-accordion-content-height, auto))
+      var(
+        --bits-accordion-content-height,
+        var(
+          --reka-accordion-content-height,
+          var(--kb-accordion-content-height, var(--ngp-accordion-content-height, auto))
+        )
+      )
     );
   }
   to {
@@ -95,8 +107,8 @@ Until browser support for [`interpolate-size: allow-keywords`][MDN_Interpolate_S
 - `--radix-accordion-content-height` as in the [Radix documentation][Radix_Docs]
 - `--bits-accordion-content-height` as in the [BitsUI documentation][Bits_Docs]
 - `--reka-accordion-content-height` as in the [Reka documentation][Reka_Docs]
-
-Check out the [setting content height](#setting-content-height) section for more information.
+- `--kb-accordion-content-height` as in the [Kobalte documentation][Kobalte_Docs]
+- `--ngp-accordion-content-height` as in the [Angular Primitives documentation][Angular_Primitives_Docs]
 
 ### HTML
 
@@ -183,7 +195,7 @@ import {
 
 Learn more about Reka's accordion primitive in the [Reka documentation][Reka_Docs].
 
-### Using Kobalte
+### Using Kobalte (SolidJS)
 
 Kobalte automatically sets the `--kb-accordion-content-height` variable. Just use the headless accordion component primitive!
 
@@ -204,6 +216,25 @@ export default () => (
 
 Learn more about Kobalte's accordion primitive in the [Kobalte documentation][Kobalte_Docs].
 
+### Using Angular Primitives (Angular)
+
+Angular Primitives automatically sets the `--ngp-accordion-content-height` variable. Just use the headless accordion component primitive!
+
+```jsx
+<div ngpAccordion ngpAccordionType="single" ngpAccordionCollapsible>
+  <div ngpAccordionItem ngpAccordionItemValue="...">
+    <h3>
+      <button ngpAccordionTrigger ngpButton>
+        ...
+      </button>
+    </h3>
+    <div ngpAccordionContent>...</div>
+  </div>
+</div>
+```
+
+Learn more about Angular Primitives' accordion primitive in the [Angular Primitives documentation][Angular_Primitives_Docs].
+
 <!-- Links -->
 
 [MDN_Interpolate_Size]: https://developer.mozilla.org/en-US/docs/Web/CSS/interpolate-size
@@ -211,3 +242,4 @@ Learn more about Kobalte's accordion primitive in the [Kobalte documentation][Ko
 [Bits_Docs]: https://bits-ui.com/docs/components/accordion#content
 [Reka_Docs]: https://reka-ui.com/docs/components/accordion#content
 [Kobalte_Docs]: https://kobalte.dev/docs/core/components/accordion#animating-content-size
+[Angular_Primitives_Docs]: https://angularprimitives.com/primitives/accordion#ngpaccordioncontent
