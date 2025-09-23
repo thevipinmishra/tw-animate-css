@@ -36,13 +36,20 @@
     "url": "https://github.com/Wombosvideo"
   },
   "type": "module",
-  "exports": "./dist/tw-animate.css",
+  "exports": {
+    ".": {
+      "style": "./dist/tw-animate.css"
+    },
+    "./prefix": {
+      "style": "./dist/tw-animate-prefix.css"
+    }
+  },
   "main": "./dist/tw-animate.css",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "pnpx @tailwindcss/cli -i ./src/tw-animate.css -o ./dist/tw-animate.css -m && node ./transform.ts ./dist/tw-animate.css",
+    "build": "pnpx @tailwindcss/cli -i ./src/tw-animate.css -o ./dist/tw-animate.css -m && node ./transform.ts ./dist/tw-animate.css ./dist/tw-animate-prefix.css",
     "format": "prettier --write --ignore-unknown .",
     "prepare": "simple-git-hooks"
   },

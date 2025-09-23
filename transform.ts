@@ -11,14 +11,15 @@ function main() {
   const args = process.argv.slice(2);
 
   if (args.length !== 1) {
-    console.error("Usage: node transform.ts <file>");
+    console.error("Usage: node transform.ts <input-file> <output-file>");
     process.exit(1);
   }
 
-  const filePath = resolve(args[0]);
+  const inputFile = resolve(args[0]);
+  const outputFile = resolve(args[1]);
 
   try {
-    let content = readFileSync(filePath, "utf-8");
+    let content = readFileSync(inputFile, "utf-8");
 
     // First regex: calc(--value(integer|number) * var(--spacing)) -> --spacing(--value($1))
     content = content.replace(
@@ -32,10 +33,10 @@ function main() {
       "--spacing(--value($1)$2*$3-1)",
     );
 
-    writeFileSync(filePath, content, "utf-8");
-    console.log(`Transformed ${filePath}`);
+    writeFileSync(outputFile, content, "utf-8");
+    console.log(`Transformed ${inputFile} -> ${outputFile}`);
   } catch (error) {
-    console.error(`Error processing file ${filePath}:`, error);
+    console.error(`Error processing file ${inputFile}:`, error);
     process.exit(1);
   }
 }
