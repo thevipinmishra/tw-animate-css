@@ -10,7 +10,7 @@ import { resolve } from "path";
 function main() {
   const args = process.argv.slice(2);
 
-  if (args.length !== 1) {
+  if (args.length !== 2) {
     console.error("Usage: node transform.ts <input-file> <output-file>");
     process.exit(1);
   }
